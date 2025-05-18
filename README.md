@@ -6,6 +6,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/algorithm07-ai/codewhisper?style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/algorithm07-ai/codewhisper?style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/network/members)
 [![GitHub license](https://img.shields.io/github/license/algorithm07-ai/codewhisper?style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/blob/main/LICENSE)
+[![维护状态](https://img.shields.io/badge/维护状态-活跃-brightgreen?style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/commits/main)
+[![版本](https://img.shields.io/github/v/release/algorithm07-ai/codewhisper?include_prereleases&style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/releases)
+[![DeepSeek驱动](https://img.shields.io/badge/DeepSeek-驱动-blue?style=for-the-badge)](https://deepseek.com/)
+[![Vercel](https://img.shields.io/badge/托管于-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
 
 ---
 

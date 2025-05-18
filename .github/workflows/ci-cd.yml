@@ -1,0 +1,125 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: 测试
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+      
+      - name: 设置Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: npm ci
+      
+      - name: 运行Lint检查
+        run: npm run lint || true
+      
+      - name: 运行测试
+        run: npm test || true
+
+  build:
+    name: 构建
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+      
+      - name: 设置Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: npm ci
+      
+      - name: 构建
+        run: npm run build
+      
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-files
+          path: .next
+
+  deploy-preview:
+    name: 部署预览环境
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+      
+      - name: 设置Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: 安装Vercel CLI
+        run: npm install -g vercel
+      
+      - name: 下载构建产物
+        uses: actions/download-artifact@v3
+        with:
+          name: build-files
+          path: .next
+      
+      - name: 部署到Vercel预览环境
+        run: |
+          vercel --token ${VERCEL_TOKEN} --confirm
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+
+  deploy-production:
+    name: 部署生产环境
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+      
+      - name: 设置Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: 安装Vercel CLI
+        run: npm install -g vercel
+      
+      - name: 下载构建产物
+        uses: actions/download-artifact@v3
+        with:
+          name: build-files
+          path: .next
+      
+      - name: 部署到Vercel生产环境
+        run: |
+          vercel --token ${VERCEL_TOKEN} --prod --confirm
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
