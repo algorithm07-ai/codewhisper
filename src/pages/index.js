@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import CodeGenerator from '../components/CodeGenerator';
+import HelpNav from '../components/HelpNav';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -31,6 +32,9 @@ export default function Home() {
       <footer className={styles.footer}>
         <p>Powered by DeepSeekAI · 代码生成器</p>
       </footer>
+      
+      {/* 帮助导航 - 不影响现有UI布局 */}
+      <HelpNav />
     </div>
   );
 }
