@@ -1,42 +1,30 @@
-<div align="center">
-  <h1>CodeWhisper</h1>
-  <p><strong>将您的想法转变为应用 - 由DeepSeekAI驱动的智能代码生成工具</strong></p>
+# CodeWhisper
 
-  <p align="center">
-    <a href="https://codewhisper-77tldsdeg-hongpings-projects.vercel.app/"><strong>在线体验 »</strong></a>
-    ·
-    <a href="#快速开始">快速开始</a>
-    ·
-    <a href="#功能特点">功能特点</a>
-    ·
-    <a href="#服务方案">服务方案</a>
-  </p>
-  
-  <p align="center">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/algorithm07-ai/codewhisper?style=for-the-badge">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/algorithm07-ai/codewhisper?style=for-the-badge">
-    <img alt="GitHub license" src="https://img.shields.io/github/license/algorithm07-ai/codewhisper?style=for-the-badge">
-  </p>
-</div>
+> 将您的想法转变为应用 - 由DeepSeekAI驱动的智能代码生成工具
+
+[![在线体验](https://img.shields.io/badge/在线体验-blue?style=for-the-badge)](https://codewhisper-77tldsdeg-hongpings-projects.vercel.app/)
+[![GitHub stars](https://img.shields.io/github/stars/algorithm07-ai/codewhisper?style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/algorithm07-ai/codewhisper?style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/network/members)
+[![GitHub license](https://img.shields.io/github/license/algorithm07-ai/codewhisper?style=for-the-badge)](https://github.com/algorithm07-ai/codewhisper/blob/main/LICENSE)
 
 ---
 
 ## 📖 介绍
 
-CodeWhisper 是一款基于 DeepSeekAI 的智能代码生成工具，旨在帮助开发者将自然语言描述转换为高质量的代码。无论您是经验丰富的程序员寻求提高效率，还是刚入门的新手需要编程指导，CodeWhisper 都能满足您的需求。
+CodeWhisper 是一款基于 DeepSeekAI 的智能代码生成工具，帮助开发者将自然语言描述转换为高质量的代码。无论您是经验丰富的程序员寻求提高效率，还是刚入门的新手需要编程指导，CodeWhisper 都能满足您的需求。
 
 通过扩展的 Anthropic MCP 协议，CodeWhisper 提供了卓越的代码生成能力，支持多种编程语言和任务类型，让您的开发过程更加顺畅高效。
 
 ## ✨ 功能特点
 
-- **💻 多语言支持**: 支持JavaScript、Python、Java、C#、C++、TypeScript、Go、Rust等8种主流编程语言
-- **🧠 DeepSeek AI驱动**: 基于先进的DeepSeek AI大模型，对中文需求有更好的理解能力
-- **🔍 多任务类型**: 支持函数实现、完整应用、算法实现、数据结构、API设计、界面组件、测试代码等多种任务类型
-- **📊 代码质量保证**: 生成的代码遵循最佳实践，包含注释和错误处理
-- **⚡ 实时生成**: 高速响应，通常在几秒内完成代码生成
-- **🔄 上下文感知**: 智能理解您的需求上下文，提供更精准的代码解决方案
-- **📱 响应式设计**: 适配各种设备屏幕，让您在桌面和移动设备上都能高效使用
-- **🛡️ 安全可靠**: 不保存敏感代码，保护您的知识产权
+- **多语言支持**: 支持JavaScript、Python、Java、C#、C++、TypeScript、Go、Rust等8种主流编程语言
+- **DeepSeek AI驱动**: 基于先进的DeepSeek AI大模型，对中文需求有更好的理解能力
+- **多任务类型**: 支持函数实现、完整应用、算法实现、数据结构、API设计、界面组件、测试代码等多种任务类型
+- **代码质量保证**: 生成的代码遵循最佳实践，包含注释和错误处理
+- **实时生成**: 高速响应，通常在几秒内完成代码生成
+- **上下文感知**: 智能理解您的需求上下文，提供更精准的代码解决方案
+- **响应式设计**: 适配各种设备屏幕，让您在桌面和移动设备上都能高效使用
+- **安全可靠**: 不保存敏感代码，保护您的知识产权
 
 ## 🚀 快速开始
 
