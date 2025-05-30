@@ -1,22 +1,109 @@
 {
-  "name": "codewhisper-mvp",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+  "name": "codewhisper",
+  "displayName": "CodeWhisper - AI Code Assistant",
+  "description": "AI-powered code generation, optimization, and explanation tool for VS Code. Supports multiple programming languages with DeepSeek AI integration.",
+  "version": "1.0.0",
+  "publisher": "algorithm07-ai",
+  "engines": {
+    "vscode": "^1.85.0"
   },
-  "dependencies": {
-    "next": "14.0.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "axios": "^1.6.0",
-    "react-syntax-highlighter": "^15.5.0"
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Extension Packs"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1E1E1E",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onCommand:codewhisper.generateCode",
+    "onCommand:codewhisper.explainCode",
+    "onCommand:codewhisper.optimizeCode"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codewhisper.generateCode",
+        "title": "Generate Code",
+        "category": "CodeWhisper"
+      },
+      {
+        "command": "codewhisper.explainCode",
+        "title": "Explain Code",
+        "category": "CodeWhisper"
+      },
+      {
+        "command": "codewhisper.optimizeCode",
+        "title": "Optimize Code",
+        "category": "CodeWhisper"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "CodeWhisper Configuration",
+      "properties": {
+        "codewhisper.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your DeepSeek API key for authentication"
+        },
+        "codewhisper.model": {
+          "type": "string",
+          "default": "deepseek-coder-33b-instruct",
+          "description": "The AI model to use for code generation"
+        },
+        "codewhisper.temperature": {
+          "type": "number",
+          "default": 0.7,
+          "description": "Controls randomness in the AI's output (0.0 to 1.0)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.0.4"
-  }
+    "@types/vscode": "^1.85.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.8.4",
+    "@vscode/test-electron": "^2.1.5"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/algorithm07-ai/codewhisper.git"
+  },
+  "homepage": "https://github.com/algorithm07-ai/codewhisper#readme",
+  "bugs": {
+    "url": "https://github.com/algorithm07-ai/codewhisper/issues"
+  },
+  "keywords": [
+    "ai",
+    "code generation",
+    "code completion",
+    "deepseek",
+    "intellisense",
+    "productivity",
+    "programming",
+    "vscode-extension"
+  ],
+  "license": "MIT"
 }
