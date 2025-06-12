@@ -1,0 +1,111 @@
+{
+  "name": "deepbubble-genius-ai-25",
+  "displayName": "IntelliScript Coder - AI Copilot",
+  "description": "Your AI-powered copilot for VS Code. Provides intelligent code generation, completion, optimization, and explanation. A powerful alternative to GitHub Copilot, powered by DeepSeek.",
+  "version": "1.0.3",
+  "publisher": "deepbubble",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Extension Packs"
+  ],
+  "galleryBanner": {
+    "color": "#1E1E1E",
+    "theme": "dark"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codewhisper.generateCode",
+        "title": "Generate Code",
+        "category": "CodeWhisper"
+      },
+      {
+        "command": "codewhisper.explainCode",
+        "title": "Explain Code",
+        "category": "CodeWhisper"
+      },
+      {
+        "command": "codewhisper.optimizeCode",
+        "title": "Optimize Code",
+        "category": "CodeWhisper"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "CodeWhisper Configuration",
+      "properties": {
+        "codewhisper.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your DeepSeek API key for authentication"
+        },
+        "codewhisper.model": {
+          "type": "string",
+          "default": "deepseek-coder-33b-instruct",
+          "description": "The AI model to use for code generation"
+        },
+        "codewhisper.temperature": {
+          "type": "number",
+          "default": 0.7,
+          "description": "Controls randomness in the AI's output (0.0 to 1.0)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts",
+    "test": "jest",
+    "test:integration": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "jest": "^29.7.0",
+    "mocha": "^10.1.0",
+    "ts-jest": "^29.3.4",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "keywords": [
+    "AI",
+    "GPT",
+    "LLM",
+    "Copilot",
+    "Code Generation",
+    "Code Assistant",
+    "DeepSeek",
+    "Code Completion",
+    "Code Optimizer",
+    "Refactoring",
+    "Bug Fixer",
+    "Code Explanation",
+    "Developer Tools",
+    "Productivity",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Java",
+    "C#",
+    "Go"
+  ],
+  "license": "MIT"
+}
