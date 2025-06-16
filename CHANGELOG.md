@@ -1,12 +1,12 @@
 # Changelog
 
-All notable changes to the CodeWhisper extension will be documented in this file.
+All notable changes to the IntelliScript Coder extension will be documented in this file.
 
 ## [1.0.0] - 2025-05-30
 
 ### Added
-- Initial release of CodeWhisper extension
-- Support for code generation from natural language
+- Initial release of IntelliScript Coder extension
+- Support for intelliScriptCoderation from natural language
 - Code explanation and optimization features
 - Multi-language support (JavaScript/TypeScript, Python, Java, C#, C++, Go, Rust)
 - VS Code integration with command palette and context menu

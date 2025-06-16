@@ -1,7 +1,7 @@
 {
-  "name": "deepbubble-genius-ai-25",
-  "displayName": "IntelliScript Coder - AI Copilot",
-  "description": "Your AI-powered copilot for VS Code. Provides intelligent code generation, completion, optimization, and explanation. A powerful alternative to GitHub Copilot, powered by DeepSeek.",
+  "name": "intelliscript-coder",
+  "displayName": "IntelliScript Coder by DeepCode",
+  "description": "AI-powered coding assistant for VS Code. Generate, explain, optimize, and refactor code with DeepSeek LLM. Formerly CodeWhisper, now IntelliScript Coder by DeepCode.",
   "version": "1.0.3",
   "publisher": "deepbubble",
   "engines": {
@@ -17,42 +17,61 @@
     "theme": "dark"
   },
   "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:intelliScriptCoder.generateCode",
+    "onCommand:intelliScriptCoder.explainCode",
+    "onCommand:intelliScriptCoder.optimizeCode"
+  ],
   "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "intelliScriptCoder.explainCode",
+          "group": "navigation@5"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "codewhisper.generateCode",
+        "command": "intelliScriptCoder.generateCode",
         "title": "Generate Code",
-        "category": "CodeWhisper"
+        "category": "IntelliScript Coder"
       },
       {
-        "command": "codewhisper.explainCode",
+        "command": "intelliScriptCoder.explainCode",
         "title": "Explain Code",
-        "category": "CodeWhisper"
+        "category": "IntelliScript Coder"
       },
       {
-        "command": "codewhisper.optimizeCode",
+        "command": "intelliScriptCoder.optimizeCode",
         "title": "Optimize Code",
-        "category": "CodeWhisper"
+        "category": "IntelliScript Coder"
       }
     ],
     "configuration": {
       "type": "object",
-      "title": "CodeWhisper Configuration",
+      "title": "IntelliScript Coder Configuration",
       "properties": {
-        "codewhisper.apiKey": {
+        "intelliScriptCoder.apiKey": {
           "type": "string",
           "default": "",
           "description": "Your DeepSeek API key for authentication"
         },
-        "codewhisper.model": {
+        "intelliScriptCoder.model": {
           "type": "string",
           "default": "deepseek-coder-33b-instruct",
           "description": "The AI model to use for code generation"
         },
-        "codewhisper.temperature": {
+        "intelliScriptCoder.temperature": {
           "type": "number",
           "default": 0.7,
           "description": "Controls randomness in the AI's output (0.0 to 1.0)"
+        },
+        "intelliScriptCoder.braveApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Brave Search API key for authentication"
         }
       }
     }
@@ -83,7 +102,9 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^5.3.0"
   },
   "keywords": [
     "AI",

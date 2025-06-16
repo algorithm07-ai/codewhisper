@@ -30,10 +30,10 @@
 
 1.  **安装 (Install)**: 在 VS Code 扩展市场中搜索 `IntelliScript Coder`, `DeepBubble`, 或 `AI Copilot`，然后点击“安装”。
     (Search for `IntelliScript Coder`, `DeepBubble`, or `AI Copilot` in the VS Code Marketplace and click "Install".)
-2.  **配置 API 密钥 (Configure API Key)**: 打开设置 (`Ctrl+,`)，搜索 `codewhisper.apiKey`，然后填入您的 DeepSeek API 密钥。
-    (Open Settings (`Ctrl+,`), search for `codewhisper.apiKey`, and enter your DeepSeek API key.)
-3.  **开始编码 (Start Coding)**: 打开命令面板 (`Ctrl+Shift+P`)，查找 `CodeWhisper` 相关命令，开始使用 AI 助手。
-    (Open the Command Palette (`Ctrl+Shift+P`) and look for the `CodeWhisper` commands to start using the AI assistant.)
+2.  **配置 API 密钥 (Configure API Key)**: 打开设置 (`Ctrl+,`)，搜索 `intelliScriptCoder.apiKey`，然后填入您的 DeepSeek API 密钥。
+    (Open Settings (`Ctrl+,`), search for `intelliScriptCoder.apiKey`, and enter your DeepSeek API key.)
+3.  **开始编码 (Start Coding)**: 打开命令面板 (`Ctrl+Shift+P`)，查找 `IntelliScript Coder` 相关命令，开始使用 AI 助手。
+    (Open the Command Palette (`Ctrl+Shift+P`) and look for the `IntelliScript Coder` commands to start using the AI assistant.)
 
 ## 🌐 支持的语言 / Supported Languages
 
@@ -50,18 +50,18 @@
 
 ## 🤝 致谢与资源 / Credits & Resources
 
-本插件的初始版本基于优秀的开源项目 [CodeWhisper](https://github.com/algorithm07-ai/codewhisper) 构建。我们对原作者 [algorithm07-ai](https://github.com/algorithm07-ai) 的杰出工作和无私分享表示衷心的感谢。
+本插件的初始版本基于优秀的开源项目 [IntelliScript Coder](https://github.com/algorithm07-ai/intelliScriptCoder) 构建。我们对原作者 [algorithm07-ai](https://github.com/algorithm07-ai) 的杰出工作和无私分享表示衷心的感谢。
 
-This extension was originally based on the excellent open-source project [CodeWhisper](https://github.com/algorithm07-ai/codewhisper). We extend our sincere gratitude to the original author, [algorithm07-ai](https://github.com/algorithm07-ai), for their foundational work.
+This extension was originally based on the excellent open-source project [IntelliScript Coder](https://github.com/algorithm07-ai/intelliScriptCoder). We extend our sincere gratitude to the original author, [algorithm07-ai](https://github.com/algorithm07-ai), for their foundational work.
 
-- **问题反馈 (Issues & Feedback)**: [GitHub Issues](https://github.com/algorithm07-ai/codewhisper/issues)
-- **源码仓库 (Source Repository)**: [GitHub Repository](https://github.com/algorithm07-ai/codewhisper)
+- **问题反馈 (Issues & Feedback)**: [GitHub Issues](https://github.com/algorithm07-ai/intelliScriptCoder/issues)
+- **源码仓库 (Source Repository)**: [GitHub Repository](https://github.com/algorithm07-ai/intelliScriptCoder)
 
 ## 📄 许可证 / License
 
-本插件采用 MIT 许可证。详情请见 [LICENSE](https://github.com/algorithm07-ai/codewhisper/blob/master/LICENSE) 文件。
+本插件采用 MIT 许可证。详情请见 [LICENSE](https://github.com/algorithm07-ai/intelliScriptCoder/blob/master/LICENSE) 文件。
 
-This extension is licensed under the MIT License. See the [LICENSE](https://github.com/algorithm07-ai/codewhisper/blob/master/LICENSE) file for details.
+This extension is licensed under the MIT License. See the [LICENSE](https://github.com/algorithm07-ai/intelliScriptCoder/blob/master/LICENSE) file for details.
 Navigate to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side.
 Search for “DeepBubble Genius AI”.
 Click on the Install button.
@@ -78,5 +78,5 @@ If you’d like to contribute, feel free to check out the GitHub repository wher
 
 🔗 Links
 DeepBubble Genius AI on VS Code Marketplace
-GitHub Repository (https://github.com/algorithm07-ai/codewhisper)
+GitHub Repository (https://github.com/algorithm07-ai/intelliScriptCoder)
 Thank you for your support! Happy coding! 💻✨

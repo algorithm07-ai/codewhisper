@@ -1,0 +1,1 @@
+{"version":3,"file":"WhisperError.js","sourceRoot":"","sources":["../../src/core/WhisperError.ts"],"names":[],"mappings":";;;AAAA,2BAA2B;AAC3B,MAAa,YAAa,SAAQ,KAAK;IACrC,YACE,OAAe,EACR,IAAY,EACZ,OAAa;QAEpB,KAAK,CAAC,OAAO,CAAC,CAAC;QAHR,SAAI,GAAJ,IAAI,CAAQ;QACZ,YAAO,GAAP,OAAO,CAAM;QAGpB,IAAI,CAAC,IAAI,GAAG,cAAc,CAAC,CAAC,4CAA4C;IAC1E,CAAC;CACF;AATD,oCASC"}
