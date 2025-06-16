@@ -1,4 +1,10 @@
-# IntelliScript Coder - Your AI Copilot for VS Code
+# IntelliScript Coder by DeepCode
+
+> 本仓库已由 codewhisper 更名为 intelliscript-coder
+
+---
+
+IntelliScript Coder - Your AI Copilot for VS Code
 
 **IntelliScript Coder** 是一款功能强大的智能 AI 编程助手，旨在成为您在 Visual Studio Code 中的终极 Copilot。通过 AI 驱动的代码生成、代码补全、优化和解释等功能，极大地提升您的开发效率。作为 GitHub Copilot 的有力替代品，本插件由先进的 DeepSeek 模型强力驱动。
 
